@@ -1,0 +1,44 @@
+
+
+@mixin transition-ease {
+    transition: all 0.5s ease-in-out;
+}
+
+
+@mixin flexcenter($direction) {
+    display: flex;
+    flex-direction: $direction;
+}
+
+@mixin heading-text {
+    font-family: 'Roboto Condensed';
+    font-size: 8vmin;
+    font-weight: 700px !important;
+}
+
+@mixin para16-text {
+    font-family: 'Open Sans';
+    font-size: 16px;
+    font-weight: 400px;
+}
+@mixin para-text {
+    font-family: 'Open Sans';
+    font-size: 16px;
+    font-weight: 600px;
+}
+
+@mixin para18-text {
+    font-family: 'Open Sans';
+    font-size: 18px;
+    font-weight: 400px;
+}
+
+
+@mixin mediaQuery($args...) {
+    @if length($args)==1 {
+        @media (max-width: nth($args, 1)) {
+            @content;
+        }
+    }
+}
+

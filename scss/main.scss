@@ -1,0 +1,81 @@
+@import 'mixins';
+@import 'variables';
+@import 'home';
+// @import 'base';
+@import 'resets';
+@import 'buttons';
+@import 'responsive';
+
+
+
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 70px;
+    z-index: 2;
+    width: 100%;
+    padding-block: 1rem;
+    background-color: $header-clr;
+    // border: 1px solid;
+
+.nav{
+    width: 95%;
+    margin-inline: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    // border: 1px solid red;
+li {
+        list-style-type: none;
+    }
+
+    .logo-x{
+        width: 30px;
+        height: 30px;
+    }
+.menu-nav li{
+    display: inline-block;
+    margin-left: 10px;
+}
+}
+@media (max-width: 500px) {
+    .menu-nav {
+        display: none;
+    }
+}
+}
+
+.second-nav{
+    background-color: $white-text-clr;
+    margin-top: 70px;
+    height: 70px;
+.nav-decs{
+    @include flexcenter(row);
+    justify-content: space-between;
+    align-items: center;
+    padding-inline: 50px;
+}
+}
+main {
+    height: 100%;
+    width: 100%;
+
+    .accordion {
+        button.accordion-button {
+            box-shadow: none;
+            // &:active {
+            //         outline: none;
+            //         background-color: transparent;
+            //         box-shadow: none;
+            //     }
+            &:hover {
+                outline: none;
+                background-color: transparent;
+                box-shadow: none;
+            }
+            
+        }
+    }
+}
